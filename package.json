@@ -12,7 +12,9 @@
     "lint": "eslint src webpack.config.babel.js --ext .js,.jsx",
     "test": "yarn lint && flow && jest --coverage",
     "travis-test": "yarn test && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
-    "prepush": "yarn test"
+    "prepush": "yarn test",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -46,6 +48,8 @@
     "react-router": "^4.1.2",
     "react-router-redux": "next",
     "redux": "^3.7.2",
-    "webpack": "^3.4.1"
-  }
+    "webpack": "^3.4.1",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
