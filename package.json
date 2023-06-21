@@ -46,6 +46,6 @@
     "react-router": "^4.1.2",
     "react-router-redux": "next",
     "redux": "^3.7.2",
-    "webpack": "^3.4.1"
+    "webpack": "^4.0.0"
   }
 }
